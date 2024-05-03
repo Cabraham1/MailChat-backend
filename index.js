@@ -1,9 +1,14 @@
 // server/index.js
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 6000;
+
+// Use cors middleware to allow requests from all origins
+app.use(cors());
+
 
 // Connect to MongoDB
 mongoose
