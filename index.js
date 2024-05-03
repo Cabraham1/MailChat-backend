@@ -7,10 +7,13 @@ const PORT = process.env.PORT || 6000;
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/mail", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://christopherabraham8:CYj7p9GGOXDH8vmh@cluster0.8yod844.mongodb.net/mails",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
